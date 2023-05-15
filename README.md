@@ -1,18 +1,26 @@
-### Hi there 👋
 
-- 📅 05/18/2001.
-- 💻 I'm currently working as Front End Developer Intern at Commodity Supplies AG.
-- 🎓 I'm studying Systems Analysis and Development at the College of Technology of Sao Caetano do Sul.
-- 🌱 I’m currently learning react.
-- 💖 My focus in the IT area is front end development.
-- 🐱 Fun fact: I have 8 cats.
 
-</br>
+<div align="center">
+  
+  ### Michelle Budri Bognar
 
-## :mailbox: How to reach me:
-[![Gmail](https://img.shields.io/badge/-GMAIL-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:michellebbognar@gmail.com)
-[![LinkedIn](https://img.shields.io/badge/-LINKEDIN-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://bit.ly/lkdnMichelle)
+  🎨 Jr. Front-end Developer at CSA do Brasil
 
-<!--
-**MichelleBudri/MichelleBudri** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
--->
+  🎓 System Analysis and Development - Fatec São Caetano do Sul
+</div>
+
+
+<div align="center">
+
+  <a href="#">![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)</a>
+  <a href="#">![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)</a>
+  <a href="#">![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)</a>
+  <a href="#">![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)</a>
+  <a href="#">![Laravel](https://img.shields.io/badge/laravel-%23FF2D20.svg?style=for-the-badge&logo=laravel&logoColor=white)</a>
+  <a href="#">![PHP](https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white)</a>
+  <a href="#">![React Native](https://img.shields.io/badge/react_native-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)</a>
+  <a href="#">![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white)</a>
+ 
+  <a href="#">![top](https://i.pinimg.com/originals/36/5a/00/365a008c03e860f029eba6ac4edcf77f.gif)</a>
+
+</div>
