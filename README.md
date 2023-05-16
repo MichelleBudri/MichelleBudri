@@ -18,7 +18,7 @@
   🎨 Jr. Front-end Developer at CSA do Brasil
 
   🎓 System Analysis and Development - Fatec São Caetano do Sul
-  
-  <img src="https://i.pinimg.com/originals/36/5a/00/365a008c03e860f029eba6ac4edcf77f.gif" width="250" height="250" />
-  
+ 
+   <img src="https://i.pinimg.com/originals/36/5a/00/365a008c03e860f029eba6ac4edcf77f.gif" width="193" height="193" />  <a href="#">![stats](https://github-readme-streak-stats.herokuapp.com/?user=michellebudri&theme=tokyonight)</a>
+
 </div>
