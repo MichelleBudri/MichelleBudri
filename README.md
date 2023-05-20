@@ -1,6 +1,6 @@
 <div align="center">
   
-  ### Michelle Budri Bognar
+  <h1> Michelle Budri Bognar </h1>
   
   ---
   
