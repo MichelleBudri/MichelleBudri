@@ -68,14 +68,17 @@ I work across **web and mobile**, and I'm currently expanding my orbit into **na
 ---
 
 ## 🧭 Navigation Principles
+<div align="center">
 
 | ✦ | What keeps my work on course |
 |:--:|:--|
-| 🪐 | **Human-centered design** - the person always comes before the pattern |
-| 🌌 | **Intuitive journeys** - no one should need a map to find their way |
-| ✨ | **Clean, maintainable code** - future me is also a user |
-| 🛰️ | **Performance & scalability** - light payloads travel further |
-| 📡 | **Clear signal** - real communication between design and development |
+| 🪐 | **Human-centered design**: the person always comes before the pattern |
+| 🌌 | **Intuitive journeys**: no one should need a map to find their way |
+| ✨ | **Clean, maintainable code**: future me is also a user |
+| 🛰️ | **Performance & scalability**: light payloads travel further |
+| 📡 | **Clear signal**: real communication between design and development |
+
+</div>
 
 ---
 
@@ -94,19 +97,9 @@ Mobile performance         ███████████░░░░░░�
 
 <div align="center">
 
-<img height="165" src="https://github-readme-stats.vercel.app/api?username=MichelleBudri&show_icons=true&hide_border=true&bg_color=0B0A26&title_color=8FD8FF&text_color=C9C3E8&icon_color=FF5FA2&ring_color=6C4CF1" alt="GitHub stats" />
 <img height="165" src="https://github-readme-streak-stats.herokuapp.com/?user=MichelleBudri&hide_border=true&background=0B0A26&stroke=6C4CF1&ring=8FD8FF&fire=FF5FA2&currStreakLabel=8FD8FF&sideLabels=C9C3E8&currStreakNum=FFFFFF&sideNums=FFFFFF&dates=6F6A96" alt="GitHub streak" />
 
-<br/>
-
-<img height="150" src="https://github-readme-stats.vercel.app/api/top-langs/?username=MichelleBudri&layout=compact&hide_border=true&bg_color=0B0A26&title_color=8FD8FF&text_color=C9C3E8" alt="Top languages" />
-
 </div>
-
----
-
-## 📡 Open a Channel
-
 <div align="center">
 
 [![LinkedIn](https://img.shields.io/badge/Let's_connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/michelle-budri-bognar/)
