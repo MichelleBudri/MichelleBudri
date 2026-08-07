@@ -56,7 +56,7 @@
       <circle cx="150" cy="132" r="138" fill="url(#glow)" class="breathe"/>
       <circle cx="150" cy="132" r="92" fill="#12122a"/>
       <g transform="translate(300,0) scale(-1,1)">
-        <path d="M 150 40 A 92 92 0 0 0 150 224 A 21.321 92 0 0 1 150 40 Z" fill="url(#lit)"/>
+        <path d="M 150 40 A 92 92 0 0 0 150 224 A 21.391 92 0 0 1 150 40 Z" fill="url(#lit)"/>
         <g clip-path="url(#disc)" fill="#c3b49a" opacity=".42">
           <circle cx="124" cy="102" r="16"/>
           <circle cx="180" cy="154" r="12"/>
