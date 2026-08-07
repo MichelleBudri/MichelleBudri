@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 272" width="1000" height="272" role="img" aria-label="Currently learning: software architecture, advanced TypeScript, native Android with Kotlin, mobile performance">
+  <defs>
+    <linearGradient id="bgO" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#04050f"/>
+      <stop offset="55%" stop-color="#0a0922"/>
+      <stop offset="100%" stop-color="#170e33"/>
+    </linearGradient>
+    <radialGradient id="nO" cx="50%" cy="50%">
+      <stop offset="0%" stop-color="#ff5fa2" stop-opacity="0.26"/>
+      <stop offset="100%" stop-color="#ff5fa2" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="nO2" cx="50%" cy="50%">
+      <stop offset="0%" stop-color="#31d0ff" stop-opacity="0.26"/>
+      <stop offset="100%" stop-color="#31d0ff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="barA" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#6c4cf1"/><stop offset="100%" stop-color="#8fd8ff"/></linearGradient>
+    <linearGradient id="barB" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#6c4cf1"/><stop offset="100%" stop-color="#c3b0ff"/></linearGradient>
+    <linearGradient id="barC" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#b74cf1"/><stop offset="100%" stop-color="#ff9ec7"/></linearGradient>
+    <linearGradient id="barD" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#2f9fd6"/><stop offset="100%" stop-color="#7ee7c7"/></linearGradient>
+    <clipPath id="cardO"><rect width="1000" height="272" rx="20"/></clipPath>
+    <style>
+      .tw{animation:tw 3.4s ease-in-out infinite}
+      .a1{animation-delay:.5s}.a2{animation-delay:1s}.a3{animation-delay:1.7s}
+      @keyframes tw{0%,100%{opacity:.2}50%{opacity:1}}
+      .bar{transform-box:fill-box;transform-origin:left center}
+      .g1{animation:grow 1.6s cubic-bezier(.2,.7,.3,1) .2s both}
+      .g2{animation:grow 1.6s cubic-bezier(.2,.7,.3,1) .35s both}
+      .g3{animation:grow 1.6s cubic-bezier(.2,.7,.3,1) .5s both}
+      .g4{animation:grow 1.6s cubic-bezier(.2,.7,.3,1) .65s both}
+      @keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+      .p1{animation:pop 1.8s cubic-bezier(.2,.7,.3,1) .2s both}
+      .p2{animation:pop 1.8s cubic-bezier(.2,.7,.3,1) .35s both}
+      .p3{animation:pop 1.8s cubic-bezier(.2,.7,.3,1) .5s both}
+      .p4{animation:pop 1.8s cubic-bezier(.2,.7,.3,1) .65s both}
+      @keyframes pop{from{opacity:0}to{opacity:1}}
+      .orb{animation:orb 4s ease-in-out infinite}
+      @keyframes orb{0%,100%{opacity:.55}50%{opacity:1}}
+    </style>
+  </defs>
+
+  <g clip-path="url(#cardO)">
+    <rect width="1000" height="272" fill="url(#bgO)"/>
+    <ellipse cx="140" cy="230" rx="300" ry="130" fill="url(#nO)"/>
+    <ellipse cx="900" cy="20" rx="280" ry="130" fill="url(#nO2)"/>
+    <rect x="0" y="0" width="1000" height="272" rx="20" fill="none" stroke="#8fd8ff" stroke-opacity=".18"/>
+
+    <g fill="#fff">
+      <circle class="tw"    cx="60"  cy="30" r="1.2"/><circle class="tw a2" cx="330" cy="26" r="1"/>
+      <circle class="tw a1" cx="620" cy="34" r="1.3"/><circle class="tw a3" cx="940" cy="42" r="1.1"/>
+      <circle class="tw a2" cx="80"  cy="244" r="1.2"/><circle class="tw" cx="470" cy="254" r="1"/>
+      <circle class="tw a3" cx="880" cy="248" r="1.2"/>
+    </g>
+
+    <g font-family="Segoe UI, Helvetica Neue, Arial, sans-serif">
+      <g transform="translate(0,74)">
+        <circle cx="46" cy="-5" r="4" fill="#8fd8ff" class="orb"/>
+        <text x="66" y="0" font-size="14.5" font-weight="600" fill="#ffffff">Software architecture</text>
+        <rect x="380" y="-14" width="390" height="10" rx="5" fill="#ffffff" fill-opacity=".07"/>
+        <rect class="bar g1" x="380" y="-14" width="312" height="10" rx="5" fill="url(#barA)"/>
+        <text class="p1" x="796" y="-4" font-size="12" font-family="SFMono-Regular, Consolas, Menlo, monospace" fill="#8fd8ff">learning</text>
+      </g>
+      <g transform="translate(0,128)">
+        <circle cx="46" cy="-5" r="4" fill="#c3b0ff" class="orb"/>
+        <text x="66" y="0" font-size="14.5" font-weight="600" fill="#ffffff">Advanced TypeScript</text>
+        <rect x="380" y="-14" width="390" height="10" rx="5" fill="#ffffff" fill-opacity=".07"/>
+        <rect class="bar g2" x="380" y="-14" width="364" height="10" rx="5" fill="url(#barB)"/>
+        <text class="p2" x="796" y="-4" font-size="12" font-family="SFMono-Regular, Consolas, Menlo, monospace" fill="#c3b0ff">leveling up</text>
+      </g>
+      <g transform="translate(0,182)">
+        <circle cx="46" cy="-5" r="4" fill="#ff9ec7" class="orb"/>
+        <text x="66" y="0" font-size="14.5" font-weight="600" fill="#ffffff">Native Android · Kotlin</text>
+        <rect x="380" y="-14" width="390" height="10" rx="5" fill="#ffffff" fill-opacity=".07"/>
+        <rect class="bar g3" x="380" y="-14" width="234" height="10" rx="5" fill="url(#barC)"/>
+        <text class="p3" x="796" y="-4" font-size="12" font-family="SFMono-Regular, Consolas, Menlo, monospace" fill="#ff9ec7">new frontier</text>
+      </g>
+      <g transform="translate(0,236)">
+        <circle cx="46" cy="-5" r="4" fill="#7ee7c7" class="orb"/>
+        <text x="66" y="0" font-size="14.5" font-weight="600" fill="#ffffff">Mobile performance</text>
+        <rect x="380" y="-14" width="390" height="10" rx="5" fill="#ffffff" fill-opacity=".07"/>
+        <rect class="bar g4" x="380" y="-14" width="286" height="10" rx="5" fill="url(#barD)"/>
+        <text class="p4" x="796" y="-4" font-size="12" font-family="SFMono-Regular, Consolas, Menlo, monospace" fill="#7ee7c7">tuning engines</text>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,63 +1,101 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 260" width="520" height="260" role="img" aria-label="Moon phase today: Waning Crescent, 39% illuminated">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 264" width="1000" height="264" role="img" aria-label="Moon phase today: Waning Crescent, 38% illuminated">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#05060f"/>
-      <stop offset="100%" stop-color="#160e33"/>
+      <stop offset="0%" stop-color="#04050f"/>
+      <stop offset="55%" stop-color="#0a0922"/>
+      <stop offset="100%" stop-color="#190f36"/>
     </linearGradient>
     <radialGradient id="glow" cx="50%" cy="50%">
-      <stop offset="0%" stop-color="#fff6d8" stop-opacity="0.40"/>
+      <stop offset="0%" stop-color="#fff6d8" stop-opacity="0.34"/>
       <stop offset="100%" stop-color="#fff6d8" stop-opacity="0"/>
     </radialGradient>
-    <radialGradient id="lit" cx="38%" cy="32%">
-      <stop offset="0%" stop-color="#fffdf3"/>
-      <stop offset="65%" stop-color="#f0e7d3"/>
-      <stop offset="100%" stop-color="#cfc0a4"/>
+    <radialGradient id="neb" cx="50%" cy="50%">
+      <stop offset="0%" stop-color="#7b4dff" stop-opacity="0.40"/>
+      <stop offset="100%" stop-color="#7b4dff" stop-opacity="0"/>
     </radialGradient>
-    <clipPath id="disc"><circle cx="130" cy="130" r="92"/></clipPath>
-    <clipPath id="card"><rect width="520" height="260" rx="16"/></clipPath>
+    <radialGradient id="lit" cx="36%" cy="30%">
+      <stop offset="0%" stop-color="#fffdf3"/>
+      <stop offset="62%" stop-color="#f2e9d5"/>
+      <stop offset="100%" stop-color="#cbbb9d"/>
+    </radialGradient>
+    <linearGradient id="track" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#8fd8ff" stop-opacity=".15"/>
+      <stop offset="50%" stop-color="#8fd8ff" stop-opacity=".55"/>
+      <stop offset="100%" stop-color="#8fd8ff" stop-opacity=".15"/>
+    </linearGradient>
+    <clipPath id="disc"><circle cx="150" cy="132" r="92"/></clipPath>
+    <clipPath id="card"><rect width="1000" height="264" rx="20"/></clipPath>
     <style>
       .tw { animation: tw 3s ease-in-out infinite }
-      .b { animation-delay: .8s } .c { animation-delay: 1.6s } .d { animation-delay: 2.3s }
+      .b { animation-delay:.8s } .c { animation-delay:1.6s } .d { animation-delay:2.3s }
       @keyframes tw { 0%,100% { opacity:.2 } 50% { opacity:1 } }
       .breathe { animation: breathe 6s ease-in-out infinite }
       @keyframes breathe { 0%,100% { opacity:.5 } 50% { opacity:1 } }
+      .float { animation: float 9s ease-in-out infinite }
+      @keyframes float { 0%,100% { transform: translateY(0) } 50% { transform: translateY(-7px) } }
+      .ping { animation: ping 2.6s ease-out infinite }
+      @keyframes ping { 0% { r:4; opacity:.9 } 100% { r:15; opacity:0 } }
     </style>
   </defs>
 
   <g clip-path="url(#card)">
-    <rect width="520" height="260" fill="url(#bg)"/>
+    <rect width="1000" height="264" fill="url(#bg)"/>
+    <ellipse cx="120" cy="40" rx="280" ry="150" fill="url(#neb)"/>
+    <rect x="0" y="0" width="1000" height="264" rx="20" fill="none" stroke="#8fd8ff" stroke-opacity=".18"/>
+
     <g fill="#fff">
-      <circle class="tw"   cx="292" cy="42"  r="1.4"/>
-      <circle class="tw b" cx="346" cy="96"  r="1"/>
-      <circle class="tw c" cx="404" cy="52"  r="1.6"/>
-      <circle class="tw d" cx="462" cy="118" r="1.2"/>
-      <circle class="tw b" cx="330" cy="196" r="1.3"/>
-      <circle class="tw c" cx="486" cy="212" r="1"/>
-      <circle class="tw"   cx="42"  cy="34"  r="1.2"/>
-      <circle class="tw d" cx="28"  cy="216" r="1.4"/>
-      <circle class="tw c" cx="232" cy="230" r="1"/>
+      <circle class="tw"   cx="352" cy="42"  r="1.4"/><circle class="tw b" cx="430" cy="96"  r="1"/>
+      <circle class="tw c" cx="510" cy="52"  r="1.5"/><circle class="tw d" cx="600" cy="118" r="1.2"/>
+      <circle class="tw b" cx="700" cy="46"  r="1.3"/><circle class="tw c" cx="840" cy="82"  r="1"/>
+      <circle class="tw"   cx="930" cy="42"  r="1.2"/><circle class="tw d" cx="60"  cy="226" r="1.4"/>
+      <circle class="tw c" cx="300" cy="232" r="1"/>  <circle class="tw b" cx="960" cy="212" r="1.2"/>
+      <circle class="tw d" cx="46"  cy="36"  r="1.1"/><circle class="tw" cx="268" cy="88" r="1"/>
     </g>
 
-    <circle cx="130" cy="130" r="138" fill="url(#glow)" class="breathe"/>
-    <circle cx="130" cy="130" r="92" fill="#12122a"/>
-    <g transform="translate(260,0) scale(-1,1)">
-      <path d="M 130 38 A 92 92 0 0 0 130 222 A 20.839 92 0 0 1 130 38 Z" fill="url(#lit)"/>
-      <g clip-path="url(#disc)" fill="#c3b49a" opacity=".45">
-        <circle cx="104" cy="100" r="16"/>
-        <circle cx="160" cy="152" r="12"/>
-        <circle cx="118" cy="170" r="8"/>
-        <circle cx="170" cy="96" r="7"/>
-        <circle cx="78" cy="138"  r="5"/>
+    <g class="float">
+      <circle cx="150" cy="132" r="138" fill="url(#glow)" class="breathe"/>
+      <circle cx="150" cy="132" r="92" fill="#12122a"/>
+      <g transform="translate(300,0) scale(-1,1)">
+        <path d="M 150 40 A 92 92 0 0 0 150 224 A 21.321 92 0 0 1 150 40 Z" fill="url(#lit)"/>
+        <g clip-path="url(#disc)" fill="#c3b49a" opacity=".42">
+          <circle cx="124" cy="102" r="16"/>
+          <circle cx="180" cy="154" r="12"/>
+          <circle cx="138" cy="172" r="8"/>
+          <circle cx="190" cy="98" r="7"/>
+          <circle cx="98" cy="140"  r="5"/>
+        </g>
       </g>
+      <circle cx="150" cy="132" r="92" fill="none" stroke="#8fd8ff" stroke-opacity=".28"/>
     </g>
-    <circle cx="130" cy="130" r="92" fill="none" stroke="#8fd8ff" stroke-opacity=".28"/>
 
     <g font-family="Segoe UI, Helvetica Neue, Arial, sans-serif">
-      <text x="260" y="76"  font-size="11" letter-spacing="3.5" fill="#8fd8ff">AUG 06, 2026</text>
-      <text x="260" y="112" font-size="25" font-weight="700" fill="#ffffff">Waning Crescent</text>
-      <text x="260" y="148" font-size="14" fill="#c9c3e8">Illumination · 39%</text>
-      <text x="260" y="172" font-size="14" fill="#c9c3e8">Moon age · 23.5 days</text>
-      <text x="260" y="204" font-size="11" letter-spacing="2" fill="#6f6a96">SEEN FROM THE SOUTHERN SKY</text>
+      <text x="288" y="62" font-size="11" letter-spacing="3.2" fill="#8fd8ff">FRIDAY · 07 AUGUST 2026</text>
+      <text x="288" y="106" font-size="31" font-weight="700" fill="#ffffff">Waning Crescent</text>
+
+      <g font-size="12.5" font-family="SFMono-Regular, Consolas, Menlo, monospace">
+        <rect x="288" y="128" width="132" height="28" rx="14" fill="#ffffff" fill-opacity=".05" stroke="#ffd97a" stroke-opacity=".30"/>
+        <text x="304" y="147" fill="#ffd97a">ILLUM · 38%</text>
+        <rect x="430" y="128" width="152" height="28" rx="14" fill="#ffffff" fill-opacity=".05" stroke="#b39bff" stroke-opacity=".30"/>
+        <text x="446" y="147" fill="#c3b0ff">AGE · 23.5 DAYS</text>
+      </g>
+
+      <g font-size="12" font-family="SFMono-Regular, Consolas, Menlo, monospace" fill="#8f89b8">
+        <circle cx="294" cy="180" r="3.5" fill="#ffd97a"/>
+        <text x="306" y="184">NEXT FULL MOON IN 21 DAYS</text>
+        <circle cx="294" cy="206" r="3.5" fill="#8fd8ff"/>
+        <text x="306" y="210">NEXT NEW MOON IN 6 DAYS</text>
+      </g>
+
+      <text x="288" y="236" font-size="10.5" letter-spacing="2" fill="#5f5b85">SEEN FROM THE SOUTHERN SKY · BRAZIL</text>
+
+      <text x="648" y="62" font-size="11" letter-spacing="3.2" fill="#8fd8ff">LUNAR CYCLE</text>
+      <text x="648" y="92" font-size="12" fill="#6f6a96" font-family="SFMono-Regular, Consolas, Menlo, monospace">day 23.5 of 29.5</text>
+
+      <rect x="648" y="118" width="306" height="4" rx="2" fill="url(#track)"/>
+      <rect x="648" y="118" width="243.5" height="4" rx="2" fill="#ffd97a" fill-opacity=".75"/>
+      <circle cx="891.5" cy="120" r="4" fill="#ffd97a"/>
+      <circle cx="891.5" cy="120" r="4" fill="#ffd97a" class="ping"/>
+      <g opacity=".62"><circle cx="650" cy="178" r="13" fill="#0c0b1e"/><g transform="translate(1300,0) scale(-1,1)"><path d="M 650 165 A 13 13 0 0 1 650 191 A 13.000 13 0 0 0 650 165 Z" fill="#cfc6f2"/></g><circle cx="650" cy="178" r="13" fill="none" stroke="#8fd8ff" stroke-opacity=".25"/></g><g opacity=".62"><circle cx="692" cy="178" r="13" fill="#0c0b1e"/><g transform="translate(1384,0) scale(-1,1)"><path d="M 692 165 A 13 13 0 0 1 692 191 A 9.192 13 0 0 0 692 165 Z" fill="#cfc6f2"/></g><circle cx="692" cy="178" r="13" fill="none" stroke="#8fd8ff" stroke-opacity=".25"/></g><g opacity=".62"><circle cx="734" cy="178" r="13" fill="#0c0b1e"/><g transform="translate(1468,0) scale(-1,1)"><path d="M 734 165 A 13 13 0 0 1 734 191 A 0.000 13 0 0 0 734 165 Z" fill="#cfc6f2"/></g><circle cx="734" cy="178" r="13" fill="none" stroke="#8fd8ff" stroke-opacity=".25"/></g><g opacity=".62"><circle cx="776" cy="178" r="13" fill="#0c0b1e"/><g transform="translate(1552,0) scale(-1,1)"><path d="M 776 165 A 13 13 0 0 1 776 191 A 9.192 13 0 0 1 776 165 Z" fill="#cfc6f2"/></g><circle cx="776" cy="178" r="13" fill="none" stroke="#8fd8ff" stroke-opacity=".25"/></g><g opacity=".62"><circle cx="818" cy="178" r="13" fill="#0c0b1e"/><g transform="translate(1636,0) scale(-1,1)"><path d="M 818 165 A 13 13 0 0 0 818 191 A 13.000 13 0 0 0 818 165 Z" fill="#cfc6f2"/></g><circle cx="818" cy="178" r="13" fill="none" stroke="#8fd8ff" stroke-opacity=".25"/></g><g opacity=".62"><circle cx="860" cy="178" r="13" fill="#0c0b1e"/><g transform="translate(1720,0) scale(-1,1)"><path d="M 860 165 A 13 13 0 0 0 860 191 A 9.192 13 0 0 0 860 165 Z" fill="#cfc6f2"/></g><circle cx="860" cy="178" r="13" fill="none" stroke="#8fd8ff" stroke-opacity=".25"/></g><g opacity="1"><circle cx="902" cy="178" r="19" fill="none" stroke="#ffd97a" stroke-opacity=".85" stroke-width="1.4"/><circle cx="902" cy="178" r="13" fill="#0c0b1e"/><g transform="translate(1804,0) scale(-1,1)"><path d="M 902 165 A 13 13 0 0 0 902 191 A 0.000 13 0 0 0 902 165 Z" fill="#fff6da"/></g><circle cx="902" cy="178" r="13" fill="none" stroke="#8fd8ff" stroke-opacity=".25"/></g><g opacity=".62"><circle cx="944" cy="178" r="13" fill="#0c0b1e"/><g transform="translate(1888,0) scale(-1,1)"><path d="M 944 165 A 13 13 0 0 0 944 191 A 9.192 13 0 0 1 944 165 Z" fill="#cfc6f2"/></g><circle cx="944" cy="178" r="13" fill="none" stroke="#8fd8ff" stroke-opacity=".25"/></g>
     </g>
   </g>
 </svg>
