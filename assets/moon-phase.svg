@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 264" width="1000" height="264" role="img" aria-label="Moon phase today: Waning Crescent, 15% illuminated">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 264" width="1000" height="264" role="img" aria-label="Moon phase today: Waning Crescent, 7% illuminated">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#04050f"/>
@@ -56,7 +56,7 @@
       <circle cx="150" cy="132" r="138" fill="url(#glow)" class="breathe"/>
       <circle cx="150" cy="132" r="92" fill="#12122a"/>
       <g transform="translate(300,0) scale(-1,1)">
-        <path d="M 150 40 A 92 92 0 0 0 150 224 A 64.188 92 0 0 1 150 40 Z" fill="url(#lit)"/>
+        <path d="M 150 40 A 92 92 0 0 0 150 224 A 78.353 92 0 0 1 150 40 Z" fill="url(#lit)"/>
         <g clip-path="url(#disc)" fill="#c3b49a" opacity=".42">
           <circle cx="124" cy="102" r="16"/>
           <circle cx="180" cy="154" r="12"/>
@@ -69,32 +69,32 @@
     </g>
 
     <g font-family="Segoe UI, Helvetica Neue, Arial, sans-serif">
-      <text x="288" y="62" font-size="11" letter-spacing="3.2" fill="#8fd8ff">SUNDAY · 09 AUGUST 2026</text>
+      <text x="288" y="62" font-size="11" letter-spacing="3.2" fill="#8fd8ff">MONDAY · 10 AUGUST 2026</text>
       <text x="288" y="106" font-size="31" font-weight="700" fill="#ffffff">Waning Crescent</text>
 
       <g font-size="12.5" font-family="SFMono-Regular, Consolas, Menlo, monospace">
         <rect x="288" y="128" width="132" height="28" rx="14" fill="#ffffff" fill-opacity=".05" stroke="#ffd97a" stroke-opacity=".30"/>
-        <text x="304" y="147" fill="#ffd97a">ILLUM · 15%</text>
+        <text x="304" y="147" fill="#ffd97a">ILLUM · 7%</text>
         <rect x="430" y="128" width="152" height="28" rx="14" fill="#ffffff" fill-opacity=".05" stroke="#b39bff" stroke-opacity=".30"/>
-        <text x="446" y="147" fill="#c3b0ff">AGE · 25.8 DAYS</text>
+        <text x="446" y="147" fill="#c3b0ff">AGE · 26.8 DAYS</text>
       </g>
 
       <g font-size="12" font-family="SFMono-Regular, Consolas, Menlo, monospace" fill="#8f89b8">
         <circle cx="294" cy="180" r="3.5" fill="#ffd97a"/>
-        <text x="306" y="184">NEXT FULL MOON IN 19 DAYS</text>
+        <text x="306" y="184">NEXT FULL MOON IN 18 DAYS</text>
         <circle cx="294" cy="206" r="3.5" fill="#8fd8ff"/>
-        <text x="306" y="210">NEXT NEW MOON IN 4 DAYS</text>
+        <text x="306" y="210">NEXT NEW MOON IN 3 DAYS</text>
       </g>
 
       <text x="288" y="236" font-size="10.5" letter-spacing="2" fill="#5f5b85">SEEN FROM THE SOUTHERN SKY · BRAZIL</text>
 
       <text x="648" y="62" font-size="11" letter-spacing="3.2" fill="#8fd8ff">LUNAR CYCLE</text>
-      <text x="648" y="92" font-size="12" fill="#6f6a96" font-family="SFMono-Regular, Consolas, Menlo, monospace">day 25.8 of 29.5</text>
+      <text x="648" y="92" font-size="12" fill="#6f6a96" font-family="SFMono-Regular, Consolas, Menlo, monospace">day 26.8 of 29.5</text>
 
       <rect x="648" y="118" width="306" height="4" rx="2" fill="url(#track)"/>
-      <rect x="648" y="118" width="267.2" height="4" rx="2" fill="#ffd97a" fill-opacity=".75"/>
-      <circle cx="915.2" cy="120" r="4" fill="#ffd97a"/>
-      <circle cx="915.2" cy="120" r="4" fill="#ffd97a" class="ping"/>
+      <rect x="648" y="118" width="277.8" height="4" rx="2" fill="#ffd97a" fill-opacity=".75"/>
+      <circle cx="925.8" cy="120" r="4" fill="#ffd97a"/>
+      <circle cx="925.8" cy="120" r="4" fill="#ffd97a" class="ping"/>
       <g opacity=".62"><circle cx="650" cy="178" r="13" fill="#0c0b1e"/><g transform="translate(1300,0) scale(-1,1)"><path d="M 650 165 A 13 13 0 0 1 650 191 A 13.000 13 0 0 0 650 165 Z" fill="#cfc6f2"/></g><circle cx="650" cy="178" r="13" fill="none" stroke="#8fd8ff" stroke-opacity=".25"/></g><g opacity=".62"><circle cx="692" cy="178" r="13" fill="#0c0b1e"/><g transform="translate(1384,0) scale(-1,1)"><path d="M 692 165 A 13 13 0 0 1 692 191 A 9.192 13 0 0 0 692 165 Z" fill="#cfc6f2"/></g><circle cx="692" cy="178" r="13" fill="none" stroke="#8fd8ff" stroke-opacity=".25"/></g><g opacity=".62"><circle cx="734" cy="178" r="13" fill="#0c0b1e"/><g transform="translate(1468,0) scale(-1,1)"><path d="M 734 165 A 13 13 0 0 1 734 191 A 0.000 13 0 0 0 734 165 Z" fill="#cfc6f2"/></g><circle cx="734" cy="178" r="13" fill="none" stroke="#8fd8ff" stroke-opacity=".25"/></g><g opacity=".62"><circle cx="776" cy="178" r="13" fill="#0c0b1e"/><g transform="translate(1552,0) scale(-1,1)"><path d="M 776 165 A 13 13 0 0 1 776 191 A 9.192 13 0 0 1 776 165 Z" fill="#cfc6f2"/></g><circle cx="776" cy="178" r="13" fill="none" stroke="#8fd8ff" stroke-opacity=".25"/></g><g opacity=".62"><circle cx="818" cy="178" r="13" fill="#0c0b1e"/><g transform="translate(1636,0) scale(-1,1)"><path d="M 818 165 A 13 13 0 0 0 818 191 A 13.000 13 0 0 0 818 165 Z" fill="#cfc6f2"/></g><circle cx="818" cy="178" r="13" fill="none" stroke="#8fd8ff" stroke-opacity=".25"/></g><g opacity=".62"><circle cx="860" cy="178" r="13" fill="#0c0b1e"/><g transform="translate(1720,0) scale(-1,1)"><path d="M 860 165 A 13 13 0 0 0 860 191 A 9.192 13 0 0 0 860 165 Z" fill="#cfc6f2"/></g><circle cx="860" cy="178" r="13" fill="none" stroke="#8fd8ff" stroke-opacity=".25"/></g><g opacity=".62"><circle cx="902" cy="178" r="13" fill="#0c0b1e"/><g transform="translate(1804,0) scale(-1,1)"><path d="M 902 165 A 13 13 0 0 0 902 191 A 0.000 13 0 0 0 902 165 Z" fill="#cfc6f2"/></g><circle cx="902" cy="178" r="13" fill="none" stroke="#8fd8ff" stroke-opacity=".25"/></g><g opacity="1"><circle cx="944" cy="178" r="19" fill="none" stroke="#ffd97a" stroke-opacity=".85" stroke-width="1.4"/><circle cx="944" cy="178" r="13" fill="#0c0b1e"/><g transform="translate(1888,0) scale(-1,1)"><path d="M 944 165 A 13 13 0 0 0 944 191 A 9.192 13 0 0 1 944 165 Z" fill="#fff6da"/></g><circle cx="944" cy="178" r="13" fill="none" stroke="#8fd8ff" stroke-opacity=".25"/></g>
     </g>
   </g>
