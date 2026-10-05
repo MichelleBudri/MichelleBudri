@@ -1,13 +1,13 @@
 <div align="center">
 
-<img src="./assets/hero.svg" alt="Michelle Budri Bognar - Software Developer, Human Centered Digital Experiences" width="100%" />
+<a href="https://codebymichelle.com.br"><img src="./assets/hero.svg" alt="Michelle Budri Bognar - Software Developer, Human Centered Digital Experiences" width="100%" /></a>
 
 <br/>
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/michelle-budri-bognar/)
 [![Email](https://img.shields.io/badge/Email-6C4CF1?style=for-the-badge&logo=gmail&logoColor=white)](mailto:codebymichelle.br@gmail.com)
 ![Location](https://img.shields.io/badge/Brazil-0B0A26?style=for-the-badge&logo=googleearth&logoColor=8FD8FF)
-![Profile views](https://komarev.com/ghpvc/?username=MichelleBudri&style=for-the-badge&color=6C4CF1&label=VISITORS)
+![Profile views](https://hits.sh/github.com/MichelleBudri/MichelleBudri.svg?style=for-the-badge&label=VISITORS&color=6C4CF1) 
 
 <img src="./assets/divider.svg" alt="" width="100%" />
 
