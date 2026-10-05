@@ -53,8 +53,8 @@
       <g class="l4">
         <text x="36" y="240" fill="#7ee7c7">$</text><text x="58" y="240" fill="#8fd8ff">status</text>
         <circle cx="182" cy="235" r="4.5" fill="#7ee7c7" class="dot"/>
-        <text x="196" y="240" fill="#ffffff">online — exploring new orbits</text>
-        <rect class="cur" x="440" y="228" width="9" height="16" fill="#8fd8ff"/>
+        <text x="196" y="240" fill="#ffffff">online — building · studying · researching</text>
+        <rect class="cur" x="566" y="228" width="9" height="16" fill="#8fd8ff"/>
       </g>
     </g>
   </g>

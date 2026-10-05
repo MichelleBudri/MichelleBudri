@@ -15,13 +15,13 @@
 
 ## 🛰️ Mission Log
 
-<img src="./assets/mission-log.svg" alt="whoami: Michelle Budri Bognar, software developer in Brazil, building software that feels made for people" width="100%" />
+<img src="./assets/mission-log.svg" alt="whoami: Michelle Budri Bognar, software developer, MBA student and researcher in Brazil, building software that feels made for people" width="100%" />
 
 I design and build digital experiences with people at the center of the system.
 
 Technology should feel intuitive, accessible and quietly delightful. Like gravity, you shouldn't have to think about it for it to work. My craft sits where clean code meets thoughtful design: usability, visual clarity and performance, guided by empathy, structure and an unreasonable attention to detail.
 
-I work across **web and mobile**, and I'm currently expanding my orbit into **native Android with Kotlin**.
+I work across **web and mobile**, and I never stop sharpening the craft. Alongside my work as a developer, I'm pursuing an **MBA in Software Engineering at USP**, where study and research feed straight back into how I build: question, experiment, measure, refine. Right now that curiosity is taking me deeper into **native Android with Kotlin** and **AI engineering**.
 
 > Development isn't only about what a product *does*.<br/>
 > It's about how people **feel** while they use what we build. 🌙
@@ -54,7 +54,7 @@ I work across **web and mobile**, and I'm currently expanding my orbit into **na
 
 ## 🔭 Currently In Orbit
 
-<img src="./assets/orbit.svg" alt="Learning software architecture, advanced TypeScript, native Android with Kotlin and mobile performance" width="100%" />
+<img src="./assets/orbit.svg" alt="Learning software architecture, advanced TypeScript, native Android with Kotlin, mobile performance and AI engineering" width="100%" />
 
 <div align="center"><img src="./assets/divider.svg" alt="" width="100%" /></div>
 
