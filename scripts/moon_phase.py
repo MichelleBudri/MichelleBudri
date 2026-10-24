@@ -1,15 +1,12 @@
 #!/usr/bin/env python3
-"""Generate assets/moon-phase.svg with the Moon's real phase for today.
-
-No dependencies, no external APIs. Run it locally or let the daily
-GitHub Action (.github/workflows/orbit.yml) keep it fresh.
+"""The Moon's real phase for today, drawn for the mission-control panel
+(see mission_control.py). No dependencies, no external APIs.
 
 The Moon is drawn as seen from the SOUTHERN hemisphere (Brazil).
 Set HEMISPHERE = "north" to flip it.
 """
 
 import math
-import os
 from datetime import datetime, timedelta, timezone
 
 HEMISPHERE = "south"
@@ -27,9 +24,6 @@ NAMES = [
     (0.98, "Waning Crescent"),
     (1.01, "New Moon"),
 ]
-
-CYCLE_LABELS = ["New", "W. Cres", "First Q", "W. Gib", "Full", "Wan. Gib", "Last Q", "Wan. Cres"]
-
 
 def _julian_day(now: datetime) -> float:
     return now.timestamp() / 86400.0 + 2440587.5
@@ -104,40 +98,32 @@ def days(n: int) -> str:
     return "today" if n == 0 else f"in {n} day" if n == 1 else f"in {n} days"
 
 
-def build_svg(now: datetime) -> str:
+def moon_panel(now: datetime):
+    """(defs, body) SVG fragments for the moon quadrant, in a local 500x330 frame."""
     age, frac, illum, name = phase_data(now)
-    cx, cy, r = 150, 132, 92
+    cx, cy, r = 104, 116, 64
     path = lit_path(cx, cy, r, frac, illum)
     flip = f'transform="translate({2 * cx},0) scale(-1,1)"' if HEMISPHERE == "south" else ""
 
     local = now.astimezone(BRT)
-    date_label = local.strftime("%A, %d %B %Y").replace(" 0", " ")
+    date_label = local.strftime("%A, %d %B").replace(" 0", " ")
 
     full = next_event(now, 0.5)
     new = next_event(now, 0.0)
     d_full = max(0, round((full - now).total_seconds() / 86400))
     d_new = max(0, round((new - now).total_seconds() / 86400))
 
+    tx, tw = 36, 428
     strip = "".join(
-        mini_moon(650 + i * 42, 178, 13, i / 8.0, round(frac * 8) % 8 == i)
+        mini_moon(tx + 14 + i * (tw - 28) / 7, 266, 12, i / 8.0, round(frac * 8) % 8 == i)
         for i in range(8)
     )
-    marker_x = 648 + frac * 306
+    marker_x = tx + frac * tw
 
-    return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 264" width="1000" height="264" role="img" aria-label="Moon phase today: {name}, {illum * 100:.0f}% illuminated">
-  <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#04050f"/>
-      <stop offset="55%" stop-color="#0a0922"/>
-      <stop offset="100%" stop-color="#190f36"/>
-    </linearGradient>
+    defs = f"""
     <radialGradient id="glow" cx="50%" cy="50%">
       <stop offset="0%" stop-color="#fff6d8" stop-opacity="0.34"/>
       <stop offset="100%" stop-color="#fff6d8" stop-opacity="0"/>
-    </radialGradient>
-    <radialGradient id="neb" cx="50%" cy="50%">
-      <stop offset="0%" stop-color="#7b4dff" stop-opacity="0.40"/>
-      <stop offset="100%" stop-color="#7b4dff" stop-opacity="0"/>
     </radialGradient>
     <radialGradient id="lit" cx="36%" cy="30%">
       <stop offset="0%" stop-color="#fffdf3"/>
@@ -149,91 +135,40 @@ def build_svg(now: datetime) -> str:
       <stop offset="50%" stop-color="#8fd8ff" stop-opacity=".55"/>
       <stop offset="100%" stop-color="#8fd8ff" stop-opacity=".15"/>
     </linearGradient>
-    <clipPath id="disc"><circle cx="{cx}" cy="{cy}" r="{r}"/></clipPath>
-    <clipPath id="card"><rect width="1000" height="264" rx="20"/></clipPath>
-    <style>
-      .tw {{ animation: tw 3s ease-in-out infinite }}
-      .b {{ animation-delay:.8s }} .c {{ animation-delay:1.6s }} .d {{ animation-delay:2.3s }}
-      @keyframes tw {{ 0%,100% {{ opacity:.2 }} 50% {{ opacity:1 }} }}
-      .breathe {{ animation: breathe 6s ease-in-out infinite }}
-      @keyframes breathe {{ 0%,100% {{ opacity:.5 }} 50% {{ opacity:1 }} }}
-      .float {{ animation: float 9s ease-in-out infinite }}
-      @keyframes float {{ 0%,100% {{ transform: translateY(0) }} 50% {{ transform: translateY(-7px) }} }}
-      .ping {{ animation: ping 2.6s ease-out infinite }}
-      @keyframes ping {{ 0% {{ r:4; opacity:.9 }} 100% {{ r:15; opacity:0 }} }}
-    </style>
-  </defs>
+    <clipPath id="disc"><circle cx="{cx}" cy="{cy}" r="{r}"/></clipPath>"""
 
-  <g clip-path="url(#card)">
-    <rect width="1000" height="264" fill="url(#bg)"/>
-    <ellipse cx="120" cy="40" rx="280" ry="150" fill="url(#neb)"/>
-    <rect x="0" y="0" width="1000" height="264" rx="20" fill="none" stroke="#8fd8ff" stroke-opacity=".18"/>
-
-    <g fill="#fff">
-      <circle class="tw"   cx="352" cy="42"  r="1.4"/><circle class="tw b" cx="430" cy="96"  r="1"/>
-      <circle class="tw c" cx="510" cy="52"  r="1.5"/><circle class="tw d" cx="600" cy="118" r="1.2"/>
-      <circle class="tw b" cx="700" cy="46"  r="1.3"/><circle class="tw c" cx="840" cy="82"  r="1"/>
-      <circle class="tw"   cx="930" cy="42"  r="1.2"/><circle class="tw d" cx="60"  cy="226" r="1.4"/>
-      <circle class="tw c" cx="300" cy="232" r="1"/>  <circle class="tw b" cx="960" cy="212" r="1.2"/>
-      <circle class="tw d" cx="46"  cy="36"  r="1.1"/><circle class="tw" cx="268" cy="88" r="1"/>
-    </g>
-
-    <g class="float">
-      <circle cx="{cx}" cy="{cy}" r="{r + 46}" fill="url(#glow)" class="breathe"/>
-      <circle cx="{cx}" cy="{cy}" r="{r}" fill="#12122a"/>
-      <g {flip}>
-        <path d="{path}" fill="url(#lit)"/>
-        <g clip-path="url(#disc)" fill="#c3b49a" opacity=".42">
-          <circle cx="{cx - 26}" cy="{cy - 30}" r="16"/>
-          <circle cx="{cx + 30}" cy="{cy + 22}" r="12"/>
-          <circle cx="{cx - 12}" cy="{cy + 40}" r="8"/>
-          <circle cx="{cx + 40}" cy="{cy - 34}" r="7"/>
-          <circle cx="{cx - 52}" cy="{cy + 8}"  r="5"/>
+    body = f"""
+      <g class="float">
+        <circle cx="{cx}" cy="{cy}" r="{r + 34}" fill="url(#glow)" class="breathe"/>
+        <circle cx="{cx}" cy="{cy}" r="{r}" fill="#12122a"/>
+        <g {flip}>
+          <path d="{path}" fill="url(#lit)"/>
+          <g clip-path="url(#disc)" fill="#c3b49a" opacity=".42">
+            <circle cx="{cx - 18}" cy="{cy - 20}" r="11"/>
+            <circle cx="{cx + 20}" cy="{cy + 15}" r="8"/>
+            <circle cx="{cx - 8}" cy="{cy + 28}" r="5.5"/>
+            <circle cx="{cx + 27}" cy="{cy - 24}" r="4.5"/>
+            <circle cx="{cx - 36}" cy="{cy + 5}"  r="3.5"/>
+          </g>
         </g>
-      </g>
-      <circle cx="{cx}" cy="{cy}" r="{r}" fill="none" stroke="#8fd8ff" stroke-opacity=".28"/>
-    </g>
-
-    <g font-family="Segoe UI, Helvetica Neue, Arial, sans-serif">
-      <text x="288" y="62" font-size="13" fill="#8fd8ff">{date_label}</text>
-      <text x="288" y="106" font-size="31" font-weight="700" fill="#ffffff">{name}</text>
-
-      <g font-size="12.5" font-family="SFMono-Regular, Consolas, Menlo, monospace">
-        <rect x="288" y="128" width="150" height="28" rx="14" fill="#ffffff" fill-opacity=".05" stroke="#ffd97a" stroke-opacity=".30"/>
-        <text x="304" y="147" fill="#ffd97a">{illum * 100:.0f}% illuminated</text>
-        <rect x="448" y="128" width="136" height="28" rx="14" fill="#ffffff" fill-opacity=".05" stroke="#b39bff" stroke-opacity=".30"/>
-        <text x="464" y="147" fill="#c3b0ff">{age:.1f} days old</text>
+        <circle cx="{cx}" cy="{cy}" r="{r}" fill="none" stroke="#8fd8ff" stroke-opacity=".28"/>
       </g>
 
-      <g font-size="13" fill="#a9a3cf">
-        <circle cx="294" cy="180" r="3.5" fill="#ffd97a"/>
-        <text x="306" y="184">Full moon {days(d_full)}</text>
-        <circle cx="294" cy="206" r="3.5" fill="#8fd8ff"/>
-        <text x="306" y="210">New moon {days(d_new)}</text>
+      <text x="200" y="64" font-size="15" fill="#8fd8ff">{date_label}</text>
+      <text x="200" y="96" font-size="25" font-weight="700" fill="#ffffff">{name}</text>
+      <text x="200" y="124" font-size="15"><tspan fill="#ffd97a">{illum * 100:.0f}% lit</tspan><tspan fill="#6f6a96">, </tspan><tspan fill="#c3b0ff">{age:.1f} days old</tspan></text>
+      <g font-size="15" fill="#a9a3cf">
+        <circle cx="205" cy="153" r="3.5" fill="#ffd97a"/>
+        <text x="218" y="158">Full moon {days(d_full)}</text>
+        <circle cx="205" cy="179" r="3.5" fill="#8fd8ff"/>
+        <text x="218" y="184">New moon {days(d_new)}</text>
       </g>
 
-      <text x="288" y="238" font-size="12" fill="#5f5b85">Seen from the southern sky over Brazil</text>
-
-      <text x="648" y="62" font-size="13" fill="#8fd8ff">Lunar cycle</text>
-      <text x="648" y="92" font-size="12" fill="#6f6a96" font-family="SFMono-Regular, Consolas, Menlo, monospace">day {age:.1f} of {SYNODIC:.1f}</text>
-
-      <rect x="648" y="118" width="306" height="4" rx="2" fill="url(#track)"/>
-      <rect x="648" y="118" width="{frac * 306:.1f}" height="4" rx="2" fill="#ffd97a" fill-opacity=".75"/>
-      <circle cx="{marker_x:.1f}" cy="120" r="4" fill="#ffd97a"/>
-      <circle cx="{marker_x:.1f}" cy="120" r="4" fill="#ffd97a" class="ping"/>
+      <rect x="{tx}" y="220" width="{tw}" height="4" rx="2" fill="url(#track)"/>
+      <rect x="{tx}" y="220" width="{frac * tw:.1f}" height="4" rx="2" fill="#ffd97a" fill-opacity=".75"/>
+      <circle cx="{marker_x:.1f}" cy="222" r="4" fill="#ffd97a"/>
+      <circle cx="{marker_x:.1f}" cy="222" r="4" fill="#ffd97a" class="ping"/>
       {strip}
-    </g>
-  </g>
-</svg>
-"""
-
-
-if __name__ == "__main__":
-    out = os.path.join(
-        os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
-        "assets", "moon-phase.svg",
-    )
-    os.makedirs(os.path.dirname(out), exist_ok=True)
-    with open(out, "w", encoding="utf-8") as f:
-        f.write(build_svg(datetime.now(timezone.utc)))
-    print(f"wrote {out}")
+      <text x="{tx}" y="310" font-size="13" fill="#5f5b85">Seen from the southern sky over Brazil</text>
+      <text x="{tx + tw}" y="310" font-size="13" text-anchor="end" fill="#6f6a96">day {age:.1f} of {SYNODIC:.1f}</text>"""
+    return defs, body, name
