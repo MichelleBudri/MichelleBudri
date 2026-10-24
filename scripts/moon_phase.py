@@ -100,6 +100,10 @@ def mini_moon(cx, cy, r, frac, active):
             f'<circle cx="{cx}" cy="{cy}" r="{r}" fill="none" stroke="#8fd8ff" stroke-opacity=".25"/></g>')
 
 
+def days(n: int) -> str:
+    return "today" if n == 0 else f"in {n} day" if n == 1 else f"in {n} days"
+
+
 def build_svg(now: datetime) -> str:
     age, frac, illum, name = phase_data(now)
     cx, cy, r = 150, 132, 92
@@ -107,7 +111,7 @@ def build_svg(now: datetime) -> str:
     flip = f'transform="translate({2 * cx},0) scale(-1,1)"' if HEMISPHERE == "south" else ""
 
     local = now.astimezone(BRT)
-    date_label = local.strftime("%A · %d %B %Y").upper()
+    date_label = local.strftime("%A, %d %B %Y").replace(" 0", " ")
 
     full = next_event(now, 0.5)
     new = next_event(now, 0.0)
@@ -191,26 +195,26 @@ def build_svg(now: datetime) -> str:
     </g>
 
     <g font-family="Segoe UI, Helvetica Neue, Arial, sans-serif">
-      <text x="288" y="62" font-size="11" letter-spacing="3.2" fill="#8fd8ff">{date_label}</text>
+      <text x="288" y="62" font-size="13" fill="#8fd8ff">{date_label}</text>
       <text x="288" y="106" font-size="31" font-weight="700" fill="#ffffff">{name}</text>
 
       <g font-size="12.5" font-family="SFMono-Regular, Consolas, Menlo, monospace">
-        <rect x="288" y="128" width="132" height="28" rx="14" fill="#ffffff" fill-opacity=".05" stroke="#ffd97a" stroke-opacity=".30"/>
-        <text x="304" y="147" fill="#ffd97a">ILLUM · {illum * 100:.0f}%</text>
-        <rect x="430" y="128" width="152" height="28" rx="14" fill="#ffffff" fill-opacity=".05" stroke="#b39bff" stroke-opacity=".30"/>
-        <text x="446" y="147" fill="#c3b0ff">AGE · {age:.1f} DAYS</text>
+        <rect x="288" y="128" width="150" height="28" rx="14" fill="#ffffff" fill-opacity=".05" stroke="#ffd97a" stroke-opacity=".30"/>
+        <text x="304" y="147" fill="#ffd97a">{illum * 100:.0f}% illuminated</text>
+        <rect x="448" y="128" width="136" height="28" rx="14" fill="#ffffff" fill-opacity=".05" stroke="#b39bff" stroke-opacity=".30"/>
+        <text x="464" y="147" fill="#c3b0ff">{age:.1f} days old</text>
       </g>
 
-      <g font-size="12" font-family="SFMono-Regular, Consolas, Menlo, monospace" fill="#8f89b8">
+      <g font-size="13" fill="#a9a3cf">
         <circle cx="294" cy="180" r="3.5" fill="#ffd97a"/>
-        <text x="306" y="184">NEXT FULL MOON IN {d_full} DAYS</text>
+        <text x="306" y="184">Full moon {days(d_full)}</text>
         <circle cx="294" cy="206" r="3.5" fill="#8fd8ff"/>
-        <text x="306" y="210">NEXT NEW MOON IN {d_new} DAYS</text>
+        <text x="306" y="210">New moon {days(d_new)}</text>
       </g>
 
-      <text x="288" y="236" font-size="10.5" letter-spacing="2" fill="#5f5b85">SEEN FROM THE SOUTHERN SKY · BRAZIL</text>
+      <text x="288" y="238" font-size="12" fill="#5f5b85">Seen from the southern sky over Brazil</text>
 
-      <text x="648" y="62" font-size="11" letter-spacing="3.2" fill="#8fd8ff">LUNAR CYCLE</text>
+      <text x="648" y="62" font-size="13" fill="#8fd8ff">Lunar cycle</text>
       <text x="648" y="92" font-size="12" fill="#6f6a96" font-family="SFMono-Regular, Consolas, Menlo, monospace">day {age:.1f} of {SYNODIC:.1f}</text>
 
       <rect x="648" y="118" width="306" height="4" rx="2" fill="url(#track)"/>

@@ -171,23 +171,23 @@
     <g font-family="Segoe UI, Helvetica Neue, Arial, sans-serif">
       <g class="up">
         <rect x="70" y="66" width="9" height="9" rx="2" fill="#ff5fa2" class="blink"/>
-        <text x="92" y="75" font-size="13" letter-spacing="5.5" fill="#8fd8ff">HELLO, UNIVERSE</text>
+        <text x="92" y="75" font-size="15" fill="#8fd8ff">Hello, universe</text>
       </g>
       <g class="up2">
         <text x="68" y="146" font-size="52" font-weight="700" letter-spacing="0.5" fill="url(#nameGrad)">Michelle Budri Bognar</text>
         <text x="68" y="146" font-size="52" font-weight="700" letter-spacing="0.5" fill="#ffffff" mask="url(#sweepMask)">Michelle Budri Bognar</text>
       </g>
       <text class="up3" x="70" y="180" font-size="17" fill="#cfc8ec">Software Developer · Human-Centered Digital Experiences</text>
-      <g class="up4" font-size="12.5" letter-spacing="2" fill="#8f89b8" font-family="SFMono-Regular, Consolas, Menlo, monospace">
-        <rect x="70" y="200" width="112" height="26" rx="13" fill="#ffffff" fill-opacity=".05" stroke="#8fd8ff" stroke-opacity=".28"/>
+      <g class="up4" font-size="13" fill="#8f89b8">
+        <rect x="70" y="200" width="86" height="26" rx="13" fill="#ffffff" fill-opacity=".05" stroke="#8fd8ff" stroke-opacity=".28"/>
         <circle cx="88" cy="213" r="3" fill="#8fd8ff"/>
-        <text x="100" y="217" fill="#8fd8ff">BRAZIL</text>
-        <rect x="192" y="200" width="248" height="26" rx="13" fill="#ffffff" fill-opacity=".05" stroke="#b39bff" stroke-opacity=".28"/>
-        <circle cx="210" cy="213" r="3" fill="#c3b0ff"/>
-        <text x="222" y="217" fill="#c3b0ff">MBA SOFTWARE ENG · USP</text>
-        <rect x="450" y="200" width="188" height="26" rx="13" fill="#ffffff" fill-opacity=".05" stroke="#ff9ec7" stroke-opacity=".28"/>
-        <circle cx="468" cy="213" r="3" fill="#ffa9cd"/>
-        <text x="480" y="217" fill="#ffa9cd">ALWAYS BUILDING</text>
+        <text x="100" y="217" fill="#8fd8ff">Brazil</text>
+        <rect x="166" y="200" width="264" height="26" rx="13" fill="#ffffff" fill-opacity=".05" stroke="#b39bff" stroke-opacity=".28"/>
+        <circle cx="184" cy="213" r="3" fill="#c3b0ff"/>
+        <text x="196" y="217" fill="#c3b0ff">MBA in Software Engineering, USP</text>
+        <rect x="440" y="200" width="148" height="26" rx="13" fill="#ffffff" fill-opacity=".05" stroke="#ff9ec7" stroke-opacity=".28"/>
+        <circle cx="458" cy="213" r="3" fill="#ffa9cd"/>
+        <text x="470" y="217" fill="#ffa9cd">Always building</text>
       </g>
     </g>
   </g>
