@@ -7,8 +7,8 @@
 ![Location](https://img.shields.io/badge/Brazil-0B0A26?style=for-the-badge&logo=googleearth&logoColor=8FD8FF)
 ![Profile views](https://hits.sh/github.com/MichelleBudri/MichelleBudri.svg?style=for-the-badge&label=VISITORS&color=6C4CF1)
 
-I build web and mobile experiences with people at the center: intuitive, accessible and quietly delightful.<br/>
-MBA in Software Engineering from **USP**, currently going deeper into **AI engineering** and **accessibility**.
+I build web and mobile experiences that feel intuitive, inclusive, and thoughtful, always keeping the people on the other side of the screen in mind.<br/>
+MBA in Software Engineering from **USP**, currently exploring **AI engineering** and **accessibility**.
 
 <img src="./assets/mission-control.svg" alt="Mission control: whoami terminal, what I am currently learning, GitHub activity for the last year and today's moon phase over Brazil" width="100%" />
 
